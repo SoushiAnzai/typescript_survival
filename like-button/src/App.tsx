@@ -7,6 +7,7 @@ function App() {
     <div className="App">
       <header className="App-header">
       <LikeButton />
+      <FavoriteButton />
       </header>
     </div>
   );
@@ -18,6 +19,13 @@ function LikeButton() {
     setCount(count + 1);
   };
   return <span className="likeButton" onClick={handleClick}>♥ {count}</span>
+}
+function FavoriteButton() {
+  const [count, setCount] = useState(999);
+  const handleClick = () => {
+    setCount(count + 1);
+  };
+  return <span className="favoriteButton" onClick={handleClick}>★ {count}</span>
 }
 
 export default App;
